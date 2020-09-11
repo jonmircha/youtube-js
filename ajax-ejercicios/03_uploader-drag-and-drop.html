@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uploader Drag & Drop con AJAX</title>
+  <style>
+    html {
+      box-sizing: border-box;
+      font-family: sans-serif;
+      font-size: 16px;
+    }
+
+    *,
+    *:before,
+    *:after {
+      box-sizing: inherit;
+    }
+
+    body {
+      margin: 0;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      min-height: 100vh;
+    }
+
+    progress {
+      margin-top: 1rem;
+    }
+
+    .drop-zone {
+      margin-left: auto;
+      margin-right: auto;
+      border: thin dotted #000;
+      width: 80%;
+      height: 40vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    .drop-zone.is-active {
+      border: thick dashed #000;
+      background-color: rgba(0, 128, 0, .5);
+      animation: pulse 1.5s infinite;
+      animation-timing-function: linear;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <article class="drop-zone">
+      <p>Arrastra y suelta tus archivos...</p>
+    </article>
+  </main>
+  <script>
+    /* **********     Curso JavaScript: 124. Ejercicios AJAX - APIs: Uploader con AJAX - #jonmircha     ********** */
+    /* **********     Curso JavaScript: 126. Ejercicios AJAX - APIs: Uploader AJAX con Drag & Drop - #jonmircha     ********** */
+  </script>
+</body>
+
+</html>

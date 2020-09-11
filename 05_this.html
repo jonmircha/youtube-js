@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>this en JavaScript</title>
+</head>
+
+<body>
+  <h1>this en JavaScript</h1>
+  <script>
+    /* **********     Curso JavaScript: 57. this - #jonmircha     ********** */
+    /* console.log(this);
+        console.log(window);
+        console.log(this === window);
+
+        this.nombre = "Contexto Global";
+        console.log(this.nombre);
+
+        function imprimir() {
+          console.log(this.nombre);
+        }
+
+        imprimir();
+
+        const obj = {
+          nombre: "Contexto Objeto",
+          imprimir: function () {
+            console.log(this.nombre);
+          }
+        }
+
+        obj.imprimir();
+
+        const obj2 = {
+          nombre: "Contexto Objeto 2",
+          imprimir
+        }
+
+        obj2.imprimir();
+
+        const obj3 = {
+          nombre: "Contexto Objeto 3",
+          imprimir: () => {
+            console.log(this.nombre);
+          }
+        }
+
+        obj3.imprimir();
+
+        function Persona(nombre) {
+          const that = this;
+          //this.nombre = nombre;
+          that.nombre = nombre;
+
+          //return console.log(this.nombre);
+
+          //return function () {
+          //console.log(this.nombre);
+          //}
+
+          //return () => console.log(this.nombre);
+
+          return function () {
+            console.log(that.nombre);
+          }
+        }
+
+        let jon = new Persona("Jon");
+        jon();*/
+
+
+
+
+
+    /* **********     Curso JavaScript: 58. call, apply, bind - #jonmircha     ********** */
+    /* console.log(this);
+    this.lugar = "Contexto Global";
+
+    function saludar(saludo, aQuien) {
+      console.log(`${saludo} ${aQuien} desde el ${this.lugar}`);
+    }
+
+    saludar("Hola", "kEnAi");
+
+    const obj = {
+      lugar: "Contexto Objeto"
+    }
+
+    saludar.call(obj, "Hola", "Jon");
+    saludar.call(null, "Hola", "Jon");
+    saludar.call(this, "Hola", "Jon");
+    saludar.apply(obj, ["Adios", "MirCha"]);
+    saludar.apply(null, ["Adios", "MirCha"]);
+    saludar.apply(this, ["Adios", "MirCha"]);
+
+    this.nombre = "Window";
+
+    const persona = {
+      nombre: "Jon",
+      saludar: function () {
+        console.log(`Hola ${this.nombre}`)
+      }
+    }
+
+    persona.saludar();
+
+    const otraPersona = {
+      saludar: persona.saludar.bind(this)
+    }
+
+    otraPersona.saludar(); */
+  </script>
+</body>
+
+</html>

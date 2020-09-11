@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Buscador de Canciones</title>
+  <style>
+    html {
+      font-family: sans-serif;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    .loader {
+      display: none;
+      margin: auto;
+    }
+
+    .song blockquote {
+      white-space: pre-wrap;
+    }
+
+    @media screen and (min-width: 800px) {
+      main {
+        flex-direction: row;
+      }
+
+      main>* {
+        padding: 1rem;
+        flex-basis: 50%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Buscador de Canciones</h1>
+  <form id="song-search">
+    <input type="text" name="artist" placeholder="Nombre del Intérprete" required>
+    <br>
+    <input type="text" name="song" placeholder="Nombre de la Canción" required>
+    <br>
+    <input type="submit">
+  </form>
+  <img class="loader" src="../assets/loader.svg" alt="Cargando...">
+  <aside class="error"></aside>
+  <main>
+    <article class="artist"></article>
+    <article class="song"></article>
+  </main>
+  <script>
+    /* ********** Curso JavaScript: 137. Ejercicios AJAX - APIs: Buscador de Canciones con Fetch + Async - #jonmircha ********** */
+  </script>
+</body>
+
+</html>
