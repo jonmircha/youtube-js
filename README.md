@@ -14,15 +14,15 @@ Este repositorio **NO** incluye:
 
 - El código _JavaScript_ de los ejercicios prácticos, ¿Porqué no? Por qué ese código lo generarás tú cuando te pongas a hacer los ejercicios propuestos en el curso.
 
-**Repositorio _PREMIUM_**
+## Repositorio _PREMIUM_
 
 Adicionalmente a este repositorio por una pequeña aportación puedes acceder a:
 
 - Toda la teoría referente a este curso que encuentras en mi [blog](https://jonmircha.com/blog) en formato _MarkDown_.
 - El código _JavaScript_ que da solución a los ejercicios propuestos en el curso.
-- Puedes comprar el repositorio _PREMIUM_ [aquí](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6B6FCUL4SKSJN).
+- Puedes adquirir el repositorio _PREMIUM_ [aquí](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=6B6FCUL4SKSJN).
 
-Mis Redes Sociales:
+## Mis Redes Sociales
 
 - 🔔 Suscríbete al canal https://youtube.com/jonmircha?sub_confirmation=1 🤓
 - 👉 Visita mi sitio web https://jonmircha.com/ 💻
