@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Componentes con Estado</title>
+</head>
+
+<body>
+  <h1>Componentes con Estado</h1>
+  <form id="todo-form">
+    <input type="text" id="todo-item" placeholder="Tarea por hacer">
+    <input type="submit" value="Agregar">
+  </form>
+  <h2>Lista de Tareas</h2>
+  <ul id="todo-list"></ul>
+  <script>
+    const d = document;
+
+    //El State Global
+    const state = {
+      todoList: [],
+      nombre: ""
+    }
+
+    //Template UI
+    const template = () => {
+      if (template.data.todoList.length < 1) {
+        return `<p><em>Lista sin tareas por hacer.</em></p>`;
+      }
+
+      let todos = template.data.todoList.map(item => `<li>${item}</li>`).join("");
+
+      return todos;
+    }
+
+    //Agregar State al Template que genera el Componente de UI (State Local)
+    template.data = {
+      todoList: []
+    }
+
+    //Render UI
+    const render = () => {
+      console.log("Estado Global", state);
+      console.log("Estado Local", template.data);
+
+      const $list = d.getElementById("todo-list");
+      if (!$list) return;
+      $list.innerHTML = template();
+    }
+
+    //Actualizar el State de forma reactiva
+    const setState = obj => {
+      for (let key in obj) {
+        if (template.data.hasOwnProperty(key)) {
+          template.data[key] = obj[key];
+        }
+      }
+
+      render();
+    }
+
+    //Obtenemos una copia inmutable del State
+    const getState = () => JSON.parse(JSON.stringify(template.data));
+
+    d.addEventListener("DOMContentLoaded", render);
+
+    //Estableciendo valores por defecto al State
+    setState({
+      todoList: ["Tarea 1", "Tarea 2", "Tarea 3"]
+    });
+
+    d.addEventListener("submit", e => {
+      if (!e.target.matches("#todo-form")) return false;
+
+      e.preventDefault();
+
+      const $item = d.getElementById("todo-item");
+      if (!$item) return;
+
+      //Actualizar el State de forma reactiva
+      const lastState = getState()
+      lastState.todoList.push($item.value);
+      setState({ todoList: lastState.todoList });
+
+      //Limpiar el input
+      $item.value = "";
+      $item.focus();
+    });
+  </script>
+</body>
+
+</html>
