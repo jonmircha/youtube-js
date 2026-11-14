@@ -95,7 +95,7 @@ function addOrUpdateTodo() {
     })
       .then((response) => response.json())
       .then((data) => {
-        store.dispatch({ type: "UPDATED_TODO", payload: data });
+        store.dispatch({ type: "UPDATE_TODO", payload: data });
       });
   } else {
     // Añadir tarea
