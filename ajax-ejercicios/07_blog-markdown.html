@@ -13,6 +13,20 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.1/showdown.min.js"></script>
   <script>
     /* ********** Curso JavaScript: 133. Ejercicios AJAX - APIs: Blog con Markdown y Showdown.js - #jonmircha ********** */
+    const d = document,
+      $main = d.querySelector("main");
+
+    fetch("assets/javascript.md")
+      .then((res) => (res.ok ? res.text() : Promise.reject(res)))
+      .then(text => {
+        console.log(text);
+        $main.innerHTML = new showdown.Converter().makeHtml(text);
+      })
+      .catch((err) => {
+        console.log(err);
+        let message = err.statusText || "Ocurrió un error";
+        $main.innerHTML = `Error ${err.status}: ${message}`;
+      })
   </script>
 </body>
 

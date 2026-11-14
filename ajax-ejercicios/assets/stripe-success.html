@@ -10,6 +10,11 @@
 <body>
   <h1>Pago exitoso con Stripe</h1>
   <p>Gracias por la orden de Tacos 🌮😋</p>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search),
+      sessionIdStripe = urlParams.get("session_id");
+    console.log(sessionIdStripe);
+  </script>
 </body>
 
 </html>
